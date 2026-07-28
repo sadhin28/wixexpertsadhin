@@ -44,7 +44,7 @@ const Navbar = () => {
           <div>
             <img
               className="w-full h-12 object-contain" 
-              src="/src/assets/isnexwebsolutionlogo.png"
+              src="/public/isnexwebsolutionlogo.png"
               alt="logo"
             />
           </div>

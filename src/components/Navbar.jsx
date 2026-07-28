@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
+import logo from "../assets/isnexwebsolutionlogo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home"); // track current section
@@ -41,13 +41,13 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
 
           {/* Logo */}
-          <div>
-            <img
-              className="w-full h-12 object-contain" 
-              src="/public/isnexwebsolutionlogo.png"
-              alt="logo"
-            />
-          </div>
+         <div>
+  <img
+  src={logo}
+  alt="Logo"
+  className="w-full h-12 object-contain"
+/>
+</div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">

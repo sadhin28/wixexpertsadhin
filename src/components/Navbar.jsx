@@ -41,13 +41,12 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
 
           {/* Logo */}
-         <div>
-  <img
-  src={logo}
-  alt="Logo"
-  className="w-full h-12 object-contain"
-/>
-</div>
+        
+          <div className="flex-shrink-0">
+            <img src={logo} alt="Logo" className="h-12 w-auto" />
+          </div>  
+ 
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">

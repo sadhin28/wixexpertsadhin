@@ -1,6 +1,6 @@
 import { Heart, Linkedin, Mail } from "lucide-react";
 import { BsGithub } from "react-icons/bs";
-
+import logo from "../assets/isnexwebsolutionlogo.png";
 const Footer = () => {
     const currentYear = new Date().getFullYear();
 
@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto  lg:px-1 px-4 py-10">
                 <div className="grid  md:grid-cols-3 md:gap-20 gap-6 ">
                     {/* Brand */}
-                    <div className="space-y-4 ">
+                    {/* <div className="space-y-4 ">
                         <button
                             onClick={scrollToTop}
                             className="text-2xl font-bold gradient-text hover:scale-105 transition-transform"
@@ -23,7 +23,13 @@ const Footer = () => {
                         <p className="text-muted-foreground">
                             MERN Stack Developer crafting beautiful and functional web experiences.
                         </p>
-                    </div>
+                    </div> */}
+                     <div className="flex-shrink-0">
+                                <img src={logo} alt="Logo" className="h-12 w-auto" /><br></br>
+                                <p className="text-muted-foreground">
+                            Wix, Velo and CMS Developer crafting beautiful and functional web experiences.
+                        </p>
+                              </div>  
 
                     {/* Quick Links */}
                     <div className="space-y-4">

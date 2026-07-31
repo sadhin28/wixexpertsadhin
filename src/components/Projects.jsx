@@ -1,61 +1,115 @@
 import { Code, ExternalLink } from 'lucide-react';
 import React from 'react';
 import { BsGithub } from 'react-icons/bs';
+import { FaBuyNLarge, FaBuysellads } from 'react-icons/fa';
+import { GiBuyCard } from 'react-icons/gi';
+import { SiFiverr } from 'react-icons/si';
 import ReactiveButton from 'reactive-button';
 
 const Projects = () => {
     const projects = [
-        {
-            title: "University Management System",
-            description: "University Management System – A MERN stack web app built with React, TailwindCSS, React Router, Node.js, Express.js, and MongoDB, integrated with Firebase Authentication for secure user management. Features include student enrollment, results, class schedules, payments, role-based dashboards (Admin/Teacher/Student), and PDF report generation using jsPDF.",
-            technologies: ["React", "TailwindCss", "Node.js", "MongoDB", "React Router", "Firebase", "jsPDF","express.js"],
-            githubUrl: "https://github.com/sadhin28/university-management-system",
-            liveUrl: "https://university-management-sy-dc929.web.app",
-            image: "https://i.ibb.co.com/PsjmsQPL/Screenshot-2025-09-20-015449.png"
-        },
-        {
-            title: "Job Portal",
-            description: "A comprehensive job portal platform designed to enable seamless interaction between job seekers and employers. The system provides full CRUD operations for managing job postings, secure authentication, and a streamlined job application process.",
-            technologies: ["React", "TailwindCss", "Node.js", "MongoDB", "React Router", "Firebase"],
-            githubUrl: "https://github.com/sadhin28/Job-Portal-client",
-            liveUrl: "https://job-portal-72009.web.app/",
-            image: "https://i.ibb.co.com/3y9Vpn0w/Screenshot-2025-08-13-164956.png"
-        },
+  {
+   
+    title: "I.C.T. AI Research Support Platform",
+    description: "I.C.T. is a modern Wix Studio website with a responsive design, clear navigation, and AI-powered research support. It helps sponsors easily connect with and support incarcerated individuals.",
+    technologies: [
+      "Wix Studio",
+      "Velo by Wix",
+      "JavaScript",
+      "CMS",
+      "Responsive Design",
+      "SEO Optimization",
+    ],
+    buyNowUrl: "https://www.fiverr.com/s/BRqEGAl",
+    liveUrl: "https://www.ictcontools.com/",
+    image: "https://i.ibb.co.com/gLdwjb6J/Screenshot-2026-07-31-202351.png",
+  },
 
-        {
-            title: "Chill Gamer ",
-            description: "Chill Gamer is a clean, responsive, and user-friendly single-page application (SPA) that allows gamers to explore, share, and manage reviews of their favorite games. It is designed to provide a seamless and “chill” experience for every user, from casual players to hardcore fans.",
-            technologies: ["React", "TailwindCss", "Firebase", "Node.js", "MongoDB"],
-            githubUrl: "https://github.com/sadhin28/ChillGamer-Client",
-            liveUrl: "https://chill-gemer.web.app/",
-            image: "https://i.ibb.co.com/ZzMW08z2/Screenshot-2025-08-13-160257.png"
-        },
+  {
+    title: "Business Tax Resource Hub",
+    description:
+      "A professional Wix website providing essential tax checklists, worksheets, and calculators to help businesses stay organized, maximize deductions, and simplify tax preparation with an intuitive and user-friendly experience.",
+    technologies: [
+      "Wix Studio",
+      "Velo by Wix",
+      "JavaScript",
+      "CMS",
+      "Responsive Design",
+      "SEO Optimization",
+    ],
+    buyNowUrl: "https://www.fiverr.com/s/BRqEGAl",
+    liveUrl: "https://www.taxtoolkit.info/home",
+    image: "https://i.ibb.co.com/Z6yHKvH1/Screenshot-2026-07-31-212415.png",
+  },
 
-        {
-            title: "Discount Pro",
-            description: "Discount PRO is a sleek and user-friendly single-page web application built to help users in Bangladesh find and use discount coupons from popular e-commerce brands. With features like Google authentication, brand-wise coupon listings, and easy code copying, users can save money effortlessly.",
-            technologies: ["React", "Firebase", "Authentication", "React Router",],
-            githubUrl: "https://github.com/sadhin28/Discount-Pro-A9-Project",
-            liveUrl: "https://discount-pro-95f08.web.app/",
-            image: "https://i.ibb.co.com/k6D6J3ZV/Screenshot-2025-08-13-165340.png"
-        },
-        {
-            title: "City University Jatiotabadi Chatra Dal",
-            description: "Modern post application with real-time uploading, Image sharing,  and user presence indicators.",
-            technologies: ["React", "Node.js", "Express.js", "MongoDB", "Firebase Auth"],
-            githubUrl: "https://github.com/sadhin28/My-Dragon-News",
-            liveUrl: "https://dragon-news-9c86c.web.app/",
-            image: "https://i.ibb.co.com/KxhzFcPK/Screenshot-2025-08-13-170053.png"
-        },
-        {
-            title: "Donate Bangladesh",
-            description: "Donate Bangladesh” features total funds (50,000 BDT), tab navigation (Donation, History), and donation cards with impactful images, current amounts, descriptions, input fields, and vibrant “Donate Now",
-            technologies: ["Html", "JavaScript", "Tailwind CSS"],
-            githubUrl: "https://github.com/sadhin28/assignment5",
-            liveUrl: "https://assignment5-dun.vercel.app/",
-            image: "https://i.ibb.co.com/pvb382RS/Screenshot-2025-08-13-171954.png"
-        }
-    ];
+  {
+    title: "CAMY's Caribbean Mart & Eatery",
+    description:
+      "A vibrant Wix website for a Caribbean grocery store and restaurant, featuring authentic Jamaican cuisine, island-inspired branding, responsive design, and an easy-to-navigate experience for customers.",
+    technologies: [
+      "Wix Studio",
+      "Velo by Wix",
+      "JavaScript",
+      "CMS",
+      "Responsive Design",
+      "SEO Optimization",
+    ],
+    buyNowUrl: "https://www.fiverr.com/s/BRqEGAl",
+    liveUrl: "https://www.camyscaribbeanmart.com/",
+    image: "https://i.ibb.co.com/gMS17yCZ/Screenshot-2026-07-31-220154.png",
+  },
+
+  {
+    title: "Nado Embroidery",
+    description:
+      "A professional Wix website for a custom embroidery business, showcasing premium embroidered apparel and promotional products with a clean, responsive design that highlights quality craftsmanship and personalized service.",
+    technologies: [
+      "Wix Studio",
+      "Velo by Wix",
+      "JavaScript",
+      "CMS",
+      "Responsive Design",
+      "SEO Optimization",
+    ],
+    buyNowUrl: "https://www.fiverr.com/s/BRqEGAl",
+    liveUrl: "https://www.nadoembroidery.com/",
+    image: "https://i.ibb.co.com/cKF4F1PM/Screenshot-2026-07-31-221201.png",
+  },
+
+  {
+    title: "TXT Group",
+    description:
+      "A professional Wix website for a global stainless steel and nickel alloy trading company, featuring a modern, responsive design that highlights industry expertise, international operations, and trusted supply chain solutions.",
+    technologies: [
+      "Wix Studio",
+      "Velo by Wix",
+      "JavaScript",
+      "CMS",
+      "Responsive Design",
+      "SEO Optimization",
+    ],
+    buyNowUrl: "https://www.fiverr.com/s/BRqEGAl",
+    liveUrl: "https://www.txt-group.com/",
+    image: "https://i.ibb.co.com/2YknFS0M/Screenshot-2026-07-31-222135.png",
+  },
+
+  {
+    title: "JO'S Coffee Home",
+    description:
+      "A warm and inviting Wix website for a specialty coffee brand, featuring handcrafted coffee products, responsive design, and a visually engaging experience that reflects the rich flavors and passion behind every cup.",
+    technologies: [
+      "Wix Studio",
+      "Velo by Wix",
+      "JavaScript",
+      "CMS",
+      "Responsive Design",
+      "SEO Optimization",
+    ],
+    buyNowUrl: "https://www.fiverr.com/s/BRqEGAl",
+    liveUrl: "https://www.joscoffeehome.com/",
+    image: "https://i.ibb.co.com/mr34CXns/Screenshot-2026-07-31-222826.png",
+  },
+];
     return (
         <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto ">
@@ -64,15 +118,16 @@ const Projects = () => {
                         Featured <span className="text-blue-500">Projects</span>
                     </h2>
                     <p className="text-xl text-gray-400 text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
-                        A showcase of my MERN stack & Wix applications demonstrating full-stack development capabilities
+                        A showcase of my Wix Studio, Wix Classic, and Velo by Wix projects, featuring custom Velo development, CMS integrations, and advanced automation solutions.
                     </p>
                 </div>
 
                 <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
+                        
                         <div
                             key={index}
-                            className="flex flex-col group bg-gray-500/10 overflow-hidden border border-border hover:border-green-600/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl animate-fade-in-up rounded-lg"
+                            className="flex flex-col group bg-gray-500/10 overflow-hidden border border-border hover:border-blue-500 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl animate-fade-in-up rounded-lg"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             {/* Project Image/Gradient */}
@@ -110,18 +165,18 @@ const Projects = () => {
                                 <div className="flex gap-3 pt-4 flex-wrap">
                                     <ReactiveButton outline
                                         className='rounded'
-                                        color="green"
+                                        color="blue"
                                         idleText={
-                                            <a className='flex items-center' href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                                                <BsGithub className="mr-2 h-4 w-4" />
-                                                Code
+                                            <a className='flex items-center' href={project.buyNowUrl} target="_blank" rel="noopener noreferrer">
+                                                <SiFiverr className="mr-1 h-4 w-4" />
+                                                Buy Now
                                             </a>
                                         }
                                         size="lerge"
                                     />
                                     <ReactiveButton
                                         className='rounded'
-                                        color="primary"
+                                        color="blue"
                                         idleText={
                                             <a className='flex items-center' href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                                                 <ExternalLink className="mr-2 h-4 w-4" />
@@ -130,8 +185,6 @@ const Projects = () => {
                                         }
                                         size="lerge"
                                     />
-
-
 
                                 </div>
                             </div>
@@ -143,7 +196,7 @@ const Projects = () => {
                 <div className="text-center  mt-12 animate-fade-in-up animate-delay-800">
                     <ReactiveButton outline
                         className='rounded'
-                        color="green"
+                        color="blue"
                         idleText={<a className='flex p-1 items-center' href="https://github.com/sadhin28" target="_blank" rel="noopener noreferrer">
                             <BsGithub className="mr-2 h-5 w-5" />
                             View All Projects on GitHub

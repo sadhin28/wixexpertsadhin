@@ -50,7 +50,7 @@ const GitHubContributions = () => {
 
   return (
     <section className=" text-center ">
-      <h2 className="text-2xl md:text-4xl font-bold py-5 font-bold mb-4 text-white">My GitHub <span className="text-green-500">Contributions</span> </h2>
+      <h2 className="text-2xl md:text-4xl font-bold py-5 font-bold mb-4 text-white">Our GitHub <span className="text-blue-500">Contributions</span> </h2>
      <div className="gap-10 md:flex md:flex-row-reverse md:justify-center px-5">
         <div >
         <label

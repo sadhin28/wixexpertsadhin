@@ -48,8 +48,8 @@ const ContactForm = () => {
         {
             icon: <Mail className="h-6 w-6" />,
             title: "Email",
-            value: "taosifbinsadhincse@gmail.com",
-            href: "mailto:hello@developer.com"
+            value: "sadhincse@gmail.com",
+            href: "mailto:sadhincse@gmail.com"
         },
         {
             icon: <Phone className="h-6 w-6" />,
@@ -88,16 +88,17 @@ const ContactForm = () => {
 
                 <div className="px-4 text-gray-400 md:w-1/2">
                     <h2  className="text-3xl md:text-start text-center md:py-2   md:text-4xl font-bold text-white py-4">
-                        Get In <span className="text-green-500">Touch</span>
+                        Get In <span className="text-blue-500">Touch</span>
                     </h2>
-                    <p className="text-justify">I'm always excited to collaborate on new projects and discuss innovative solutions. Whether you need a full-stack web application, consultation on MERN stack development, or just want to say hello, I'd love to hear from you.</p>
+                    <p className="text-justify">Need a professional Wix Studio, Wix Classic, or Velo by Wix website? Is.Nex Web Solution creates modern, responsive, and SEO-friendly websites tailored to your business. Let's build your next project together.
+</p>
                     {/* Contact Details */}
                     <div className="space-y-4 py-5">
                         {contactInfo.map((item, index) => (
                             <a
                                 key={index}
                                 href={item.href}
-                                className="flex items-center space-x-4 p-4 bg-card rounded-lg border border-border hover:border-green-600/50 transition-all duration-300 hover:scale-[1.02] group"
+                                className="flex items-center space-x-4 p-4 bg-card rounded-lg border border-border hover:border-blue-500 transition-all duration-300 hover:scale-[1.02] group"
                             >
                                 <div className="text-primary group-hover:scale-110 transition-transform duration-300">
                                     {item.icon}
@@ -118,10 +119,10 @@ const ContactForm = () => {
                                     href={link.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="p-3 bg-card rounded-lg border border-border hover:border-green-600/50 transition-all duration-300 hover:scale-110 group"
+                                    className="p-3 bg-card rounded-lg border border-border hover:border-blue-500/50 transition-all duration-300 hover:scale-110 group"
                                     aria-label={link.label}
                                 >
-                                    <div className="text-muted-foreground group-hover:text-green-500 transition-colors duration-300">
+                                    <div className="text-muted-foreground group-hover:text-blue-500 transition-colors duration-300">
                                         {link.icon}
                                     </div>
                                 </a>
@@ -132,7 +133,7 @@ const ContactForm = () => {
 
                 <div>
                     <section className="w-full  px-4 py-12  text-white">
-                        <div className="bg-gray-900/20 p-8 rounded-lg shadow-md border hover:shadow-lg hover:border-green-600">
+                        <div className="bg-gray-900/20 p-8 rounded-lg shadow-md border hover:shadow-lg hover:border-blue-500">
 
                             <form onSubmit={sendEmail} className="space-y-6">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -145,7 +146,7 @@ const ContactForm = () => {
                                             onChange={handleChange}
                                             placeholder="Your name"
                                             required
-                                            className="w-full bg-[#0d1117] rounded-md p-3 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                                            className="w-full bg-[#0d1117] rounded-md p-3 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         />
                                     </div>
                                     <div>
@@ -157,7 +158,7 @@ const ContactForm = () => {
                                             onChange={handleChange}
                                             placeholder="your@email.com"
                                             required
-                                            className="w-full bg-[#0d1117] rounded-md p-3 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                                            className="w-full bg-[#0d1117] rounded-md p-3 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         />
                                     </div>
                                 </div>
@@ -171,7 +172,7 @@ const ContactForm = () => {
                                         onChange={handleChange}
                                         placeholder="Project discussion"
                                         required
-                                        className="w-full bg-[#0d1117] rounded-md p-3 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                                        className="w-full bg-[#0d1117] rounded-md p-3 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     />
                                 </div>
 
@@ -184,13 +185,13 @@ const ContactForm = () => {
                                         placeholder="Tell me about your project..."
                                         required
                                         rows="5"
-                                        className="w-full bg-[#0d1117] rounded-md p-3 text-white border border-gray-700 resize-none focus:outline-none focus:ring-2 focus:ring-green-500"
+                                        className="w-full bg-[#0d1117] rounded-md p-3 text-white border border-gray-700 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     ></textarea>
                                 </div>
 
                                 {status && (
                                     <p
-                                        className={`text-sm ${status.includes("success") ? "text-green-500" : "text-red-500"
+                                        className={`text-sm ${status.includes("success") ? "text-blue-500" : "text-red-500"
                                             }`}
                                     >
                                         {status}
@@ -201,7 +202,7 @@ const ContactForm = () => {
                                     <ReactiveButton outline
                                        className="rounded"
                                        type="submit"
-                                        color="green"
+                                        color="blue"
                                         idleText='Send Message'
                                         size="lerge"
                                     />

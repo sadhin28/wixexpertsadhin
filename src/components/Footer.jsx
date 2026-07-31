@@ -13,29 +13,19 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto  lg:px-1 px-4 py-10">
                 <div className="grid  md:grid-cols-3 md:gap-20 gap-6 ">
                     {/* Brand */}
-                    {/* <div className="space-y-4 ">
-                        <button
-                            onClick={scrollToTop}
-                            className="text-2xl font-bold gradient-text hover:scale-105 transition-transform"
-                        >
-                            <h1>T.B <span className="text-green-500">SADHIN</span></h1>
-                        </button>
-                        <p className="text-muted-foreground">
-                            MERN Stack Developer crafting beautiful and functional web experiences.
-                        </p>
-                    </div> */}
-                     <div className="flex-shrink-0">
+                  
+                     <a href="#home" className="flex-shrink-0">
                                 <img src={logo} alt="Logo" className="h-12 w-auto" /><br></br>
                                 <p className="text-muted-foreground">
                             Wix, Velo and CMS Developer crafting beautiful and functional web experiences.
                         </p>
-                              </div>  
+                    </a>  
 
                     {/* Quick Links */}
                     <div className="space-y-4">
                         <h3 className="text-lg font-semibold">Quick Links</h3>
                         <nav className="flex flex-col space-y-2">
-                            {['About', 'Skills', 'Projects', 'Contact'].map((link) => (
+                            {['About', 'Projects', 'Contact'].map((link) => (
                                 <button
                                     key={link}
                                     onClick={() => {
@@ -44,7 +34,7 @@ const Footer = () => {
                                             element.scrollIntoView({ behavior: 'smooth' });
                                         }
                                     }}
-                                    className="text-muted-foreground hover:text-green-600 hover:text-foreground transition-colors text-left"
+                                    className="text-muted-foreground hover:text-blue-500 hover:text-foreground transition-colors text-left"
                                 >
                                     {link}
                                 </button>
@@ -60,26 +50,26 @@ const Footer = () => {
                                 href="https://github.com/sadhin28"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 bg-card hover:border-green-500 rounded-lg transition-all duration-300 hover:scale-110 border border-border hover:border-primary"
+                                className="p-2 bg-card hover:border-blue-500 rounded-lg transition-all duration-300 hover:scale-110 border border-border hover:border-primary"
                             >
-                                <BsGithub className="h-5 w-5" />
+                                <BsGithub className="h-5 w-5 hover:text-blue-500" />
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/taosif-bin-sadhin-527899368?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 bg-card hover:border-green-500 rounded-lg transition-all duration-300 hover:scale-110 border border-border hover:border-primary"
+                                className="p-2 bg-card hover:border-blue-500 rounded-lg transition-all duration-300 hover:scale-110 border border-border hover:border-primary"
                             >
-                                <Linkedin className="h-5 w-5" />
+                                <Linkedin className="h-5 w-5 hover:text-blue-500" />
                             </a>
                             <a
                                 target="_blank"
                                 title="Email"
-                                value="taosifbinsadhincse@gmail.com"
-                                href="mailto:hello@developer.com"
-                                className="p-2 bg-card hover:border-green-500 rounded-lg transition-all duration-300 hover:scale-110 border border-border hover:border-primary"
+                                value="sadhincse@gmail.com"
+                                href="mailto:sadhincse@gmail.com"
+                                className="p-2 bg-card hover:border-blue-500 rounded-lg transition-all duration-300 hover:scale-110 border border-border hover:border-primary"
                             >
-                                <Mail className="h-5 w-5" />
+                                <Mail className="h-5 w-5 hover:text-blue-500" />
                             </a>
                         </div>
                        
@@ -89,7 +79,7 @@ const Footer = () => {
                 <div className="mt-12 pt-8 text-center border-t border-border">
                   
                         <p className="text-muted-foreground text-sm">
-                           <span className="text-green-500"> ©</span> {currentYear} TAOSIF BIN <span className="text-green-500">SADHIN</span>. All rights reserved.
+                           <span className="text-blue-500"> ©</span> {currentYear} Is.<span className="text-blue-500">Nex</span> Web Solution. All rights reserved.
                         </p>
                         
                    

@@ -75,7 +75,7 @@ const GitHubContributions = () => {
         </select>
       </div>
       <div
-        className={`border p-5 border rounded-xl hover:border-green-600 overflow-x-auto md:w-full ${containerPadding} w-full max-w-[900px]`}
+        className={`border p-5 border rounded-xl hover:border-blue-500 overflow-x-auto md:w-full ${containerPadding} w-full max-w-[900px]`}
         style={{ WebkitOverflowScrolling: "touch" }} // smooth scroll on iOS
       >
         <GitHubCalendar

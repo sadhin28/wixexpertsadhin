@@ -28,7 +28,7 @@ const Hero = () => {
           <ReactiveButton outline
            onClick={()=>scrollToSection('projects')}  
           color="blue"
-          idleText='View Portfolio'
+          idleText='View Projects'
           size="lerge"
           />
           <ReactiveButton

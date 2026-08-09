@@ -15,10 +15,11 @@ const Footer = () => {
                     {/* Brand */}
                   
                      <a href="#home" className="flex-shrink-0">
-                                <img src={logo} alt="Logo" className="h-12 w-auto" /><br></br>
-                                <p className="text-muted-foreground">
-                            Wix, Velo and CMS Developer crafting beautiful and functional web experiences.
-                        </p>
+                                <h className="text-2xl font-bold text-blue-500">TAOSIF BIN SADHIN</h><br/><br/>
+                                {/* <img src={logo} alt="Logo" className="h-12 w-auto" /><br></br> */}
+                                <p className="text-muted-foreground ">
+                                  Wix, Velo and CMS Developer crafting beautiful and functional web experiences.
+                               </p>
                     </a>  
 
                     {/* Quick Links */}
@@ -79,7 +80,7 @@ const Footer = () => {
                 <div className="mt-12 pt-8 text-center border-t border-border">
                   
                         <p className="text-muted-foreground text-sm">
-                           <span className="text-blue-500"> ©</span> {currentYear} Is.<span className="text-blue-500">Nex</span> Web Solution. All rights reserved.
+                           <span className="text-blue-500"> ©</span> {currentYear} Taosif <span className="text-blue-500">Bin</span> Sadhin. All rights reserved.
                         </p>
                         
                    

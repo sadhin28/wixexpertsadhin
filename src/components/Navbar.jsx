@@ -43,7 +43,9 @@ const Navbar = () => {
           {/* Logo */}
         
           <a href="#home" className="flex-shrink-0">
-            <img src={logo} alt="Logo" className="h-12 w-auto" />
+          <h className="text-2xl font-bold text-blue-500">TAOSIF BIN SADHIN</h>
+
+            {/* <img src={logo} alt="Logo" className="h-12 w-auto" /> */}
           </a>  
  
 

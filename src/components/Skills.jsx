@@ -46,9 +46,9 @@ const Skills = () => {
     <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-            <h1 className="text-center pb-2 text-blue-500">What We Do</h1>
+            <h1 className="text-center pb-2 text-blue-500">What I Do</h1>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in-up">
-            Our <span className="text-blue-500">Services</span>
+            My <span className="text-blue-500">Services</span>
           </h2>
           <p className="text-xl text-gray-400 text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animate-delay-200">
             End-to-end web solutions to bring your vision to life.
@@ -75,18 +75,18 @@ const Skills = () => {
         {/* Additional Tech Stack */}
         <div className="mt-16 text-center animate-fade-in-up animate-delay-600">
           <h3 className="text-xl  font-semibold mb-6">
-            Technologies We Work With
+            Technologies I Work With
           </h3>
           <div className="flex  flex-wrap justify-center gap-4">
             {[
-              "React",
-              "Node.js",
-              "Express.js",
-              "MongoDB",
-              "JavaScript",
+              "Wix",
+              "Wix Classic",
+              "Wix Studio",
+              "Wix Velo",
+              "CMS",
               "TypeScript",
-              "HTML5",
-              "CSS3",
+              "React.js",
+              "Next.js",
               "Tailwind CSS",
               "Git",
               "GitHub",

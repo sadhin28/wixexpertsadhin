@@ -90,7 +90,7 @@ const ContactForm = () => {
                     <h2  className="text-3xl md:text-start text-center md:py-2   md:text-4xl font-bold text-white py-4">
                         Get In <span className="text-blue-500">Touch</span>
                     </h2>
-                    <p className="text-justify">Need a professional Wix Studio, Wix Classic, or Velo by Wix website? Is.Nex Web Solution creates modern, responsive, and SEO-friendly websites tailored to your business. Let's build your next project together.
+                    <p className="text-justify">Need a professional Wix Studio, Wix Classic, or Velo by Wix website? I creates modern, responsive, and SEO-friendly websites tailored to your business. Let's build your next project together.
 </p>
                     {/* Contact Details */}
                     <div className="space-y-4 py-5">

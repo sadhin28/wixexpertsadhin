@@ -163,7 +163,7 @@ const Projects = () => {
 
                                 {/* Action Buttons */}
                                 <div className="flex gap-3 pt-4 flex-wrap">
-                                    <ReactiveButton outline
+                                    {/* <ReactiveButton outline
                                         className='rounded'
                                         color="blue"
                                         idleText={
@@ -173,7 +173,7 @@ const Projects = () => {
                                             </a>
                                         }
                                         size="lerge"
-                                    />
+                                    /> */}
                                     <ReactiveButton
                                         className='rounded'
                                         color="blue"

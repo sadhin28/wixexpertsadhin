@@ -116,6 +116,33 @@
       content="https://wixexpertsadhin.vercel.app/profile.png"
     />
 
+    <!-- Person + WebSite Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://wixexpertsadhin.vercel.app/#person",
+      "name": "Taosif Bin Sadhin",
+      "url": "https://wixexpertsadhin.vercel.app/",
+      "image": "https://wixexpertsadhin.vercel.app/profile.png",
+      "jobTitle": "Wix Expert, Wix Studio & Velo Developer",
+      "description": "Taosif Bin Sadhin is a Wix Expert specializing in Wix Studio, Wix Velo, Wix Harmony, CMS development, custom automation and responsive website development."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://wixexpertsadhin.vercel.app/#website",
+      "url": "https://wixexpertsadhin.vercel.app/",
+      "name": "Taosif Bin Sadhin",
+      "description": "Wix Expert, Wix Studio & Velo Developer portfolio.",
+      "publisher": {
+        "@id": "https://wixexpertsadhin.vercel.app/#person"
+      }
+    }
+  ]
+}
+</script>
   </head>
 
   <body>
@@ -130,4 +157,4 @@
   </body>
 
 </html>
-```
+

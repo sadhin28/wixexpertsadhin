@@ -38,27 +38,27 @@ const About = () => {
   const highlights = [
     {
       icon: <CgWebsite className="h-8 w-8" />,
-      title: "Wix Studio & Harmony",
+      title: "Wix Studio & Wix Harmony Development",
       description:
-        "Modern, responsive Wix Studio and Wix Harmony websites with clean UI, scalable structure, and business-focused functionality.",
+        "Modern, responsive Wix Studio and Wix Harmony websites with clean UI, scalable structure, and business-focused functionality designed for a strong online presence.",
     },
     {
       icon: <FaWix className="h-8 w-8" />,
-      title: "Wix Velo & Automation",
+      title: "Wix Velo & Custom Automation",
       description:
-        "Custom Velo development, dynamic pages, API integrations, webhooks, custom functions, and automated workflows.",
+        "Custom Wix Velo development, API integrations, webhooks, custom functions, and automated workflows that extend Wix websites beyond standard features.",
     },
     {
       icon: <Code2 className="h-8 w-8" />,
-      title: "CMS & Dynamic Systems",
+      title: "Wix CMS & Dynamic Websites",
       description:
-        "Advanced CMS architecture, dynamic pages, filtering, collections, dashboards, memberships, and role-based systems.",
+        "Advanced Wix CMS architecture, dynamic pages, collections, filtering, dashboards, memberships, gated content, and role-based website functionality.",
     },
     {
       icon: <Globe className="h-8 w-8" />,
-      title: "SEO & Performance",
+      title: "SEO & Website Performance",
       description:
-        "Fast, mobile-friendly and SEO-focused websites designed to improve usability, search visibility, and business growth.",
+        "Mobile-friendly, fast, and SEO-focused websites with optimized structure, content, usability, and performance to support better search visibility.",
     },
   ];
 
@@ -67,8 +67,8 @@ const About = () => {
     "Wix Studio",
     "Wix Harmony",
     "Wix Velo",
-    "CMS",
-    "Automation",
+    "Wix CMS",
+    "Custom Automation",
     "API Integration",
     "SEO",
     "MERN Stack",
@@ -89,10 +89,20 @@ const About = () => {
     },
   ];
 
+  const services = [
+    "Responsive Wix Website Design",
+    "Custom Wix Velo Development",
+    "Wix CMS & Dynamic Pages",
+    "SEO & Website Performance",
+    "API & Webhook Integration",
+    "Business-Focused Wix Solutions",
+  ];
+
   return (
     <section
       ref={sectionRef}
       id="about"
+      aria-labelledby="about-heading"
       className="
         relative
         py-20
@@ -111,7 +121,11 @@ const About = () => {
       "
     >
       {/* ================= BACKGROUND EFFECTS ================= */}
-      <div className="absolute inset-0 pointer-events-none">
+
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+      >
         {/* Blue Glow */}
         <div
           className="
@@ -165,9 +179,12 @@ const About = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto">
+
         {/* ================= HEADER ================= */}
-        <div className="text-center mb-20 reveal">
-          {/* Label */}
+
+        <header className="text-center mb-20 reveal">
+
+          {/* Section Label */}
           <div
             className="
               inline-flex
@@ -192,6 +209,7 @@ const About = () => {
                 dark:text-blue-400
                 animate-pulse
               "
+              aria-hidden="true"
             />
 
             <span
@@ -203,12 +221,14 @@ const About = () => {
                 dark:text-blue-400
               "
             >
-              About Me
+              About Taosif Bin Sadhin
             </span>
           </div>
 
-          {/* Heading */}
+          {/* Main SEO Heading */}
+
           <h2
+            id="about-heading"
             className="
               text-3xl
               sm:text-4xl
@@ -238,11 +258,12 @@ const About = () => {
                 dark:to-blue-500
               "
             >
-              Web Developer
+              Wix Studio Developer
             </span>
           </h2>
 
           {/* Intro */}
+
           <p
             className="
               text-base
@@ -266,12 +287,15 @@ const About = () => {
               Taosif Bin Sadhin
             </span>
             , a Wix Expert specializing in Wix Studio, Wix Harmony, Wix Velo,
-            CMS, automation, custom functionality, and SEO-focused websites that
-            help businesses grow online.
+            Wix CMS, custom automation, API integration, and SEO-focused
+            website development. I create responsive Wix websites that help
+            businesses build a professional online presence and achieve their
+            digital goals.
           </p>
-        </div>
+        </header>
 
         {/* ================= MAIN CONTENT ================= */}
+
         <div
           className="
             grid
@@ -281,11 +305,16 @@ const About = () => {
             items-center
           "
         >
-          {/* ================= LEFT ================= */}
-          <div className="reveal reveal-left space-y-7">
+
+          {/* ================= LEFT CONTENT ================= */}
+
+          <article className="reveal reveal-left space-y-7">
+
             {/* Journey Heading */}
+
             <div>
               <div className="flex items-center gap-3 mb-5">
+
                 <div
                   className="
                     p-3
@@ -294,6 +323,7 @@ const About = () => {
                     bg-blue-500/10
                     border border-blue-500/20
                   "
+                  aria-hidden="true"
                 >
                   <User2Icon
                     className="
@@ -332,10 +362,12 @@ const About = () => {
                     Building Websites That Work
                   </h3>
                 </div>
+
               </div>
             </div>
 
             {/* Paragraph 1 */}
+
             <p
               className="
                 text-justify
@@ -357,11 +389,12 @@ const About = () => {
               >
                 Wix Studio, Wix Harmony, and Wix Velo
               </span>
-              , helping businesses turn their ideas into professional digital
-              experiences.
+              , helping businesses transform their ideas into professional
+              and functional digital experiences.
             </p>
 
             {/* Paragraph 2 */}
+
             <p
               className="
                 text-justify
@@ -381,13 +414,14 @@ const About = () => {
               >
                 100+ live projects
               </span>{" "}
-              delivered, I work with custom Wix development, CMS architecture,
-              dynamic pages, Velo custom functions, API integrations, webhooks,
-              automation, e-commerce, memberships, gated content, and role-based
-              dashboards.
+              delivered, I work on custom Wix development, Wix CMS
+              architecture, dynamic pages, Velo custom functions, API
+              integrations, webhooks, automation, e-commerce, memberships,
+              gated content, and role-based dashboards.
             </p>
 
             {/* Paragraph 3 */}
+
             <p
               className="
                 text-justify
@@ -405,33 +439,31 @@ const About = () => {
                   dark:text-white
                 "
               >
-                create websites that look great, work smoothly, and support real
-                business goals.
+                create websites that look great, work smoothly, and support
+                real business goals.
               </span>{" "}
-              I combine frontend design, backend functionality, SEO, and
-              performance optimization to build scalable solutions tailored to
-              each client.
+              I combine frontend design, Wix development, SEO, performance
+              optimization, and custom functionality to build scalable
+              solutions tailored to each client’s needs.
             </p>
 
-            {/* ================= CHECK LIST ================= */}
-            <div
+            {/* ================= SERVICES / SKILLS ================= */}
+
+            <ul
+              aria-label="Wix development services"
               className="
                 grid
                 sm:grid-cols-2
                 gap-3
                 pt-2
+                list-none
+                p-0
+                m-0
               "
             >
-              {[
-                "Responsive Design",
-                "Custom Velo Development",
-                "CMS & Dynamic Pages",
-                "SEO & Performance",
-                "API & Webhook Integration",
-                "Business-Focused Solutions",
-              ].map((item, index) => (
-                <div
-                  key={index}
+              {services.map((item) => (
+                <li
+                  key={item}
                   className="
                     flex
                     items-center
@@ -454,6 +486,7 @@ const About = () => {
                       transition-transform
                       duration-300
                     "
+                    aria-hidden="true"
                   />
 
                   <span
@@ -466,11 +499,12 @@ const About = () => {
                   >
                     {item}
                   </span>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
 
             {/* ================= TECHNOLOGIES ================= */}
+
             <div
               className="
                 flex
@@ -478,6 +512,7 @@ const About = () => {
                 gap-2
                 pt-4
               "
+              aria-label="Technologies and skills"
             >
               {technologies.map((tech, index) => (
                 <span
@@ -522,11 +557,14 @@ const About = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </article>
 
-          {/* ================= RIGHT ================= */}
+          {/* ================= RIGHT CONTENT ================= */}
+
           <div className="reveal reveal-right">
+
             {/* Highlights */}
+
             <div
               className="
                 grid
@@ -535,7 +573,7 @@ const About = () => {
               "
             >
               {highlights.map((item, index) => (
-                <div
+                <article
                   key={item.title}
                   style={{
                     animationDelay: `${index * 150}ms`,
@@ -566,6 +604,7 @@ const About = () => {
                   "
                 >
                   {/* Hover Glow */}
+
                   <div
                     className="
                       absolute
@@ -584,9 +623,11 @@ const About = () => {
                       dark:from-blue-500/[0.08]
                       dark:to-cyan-500/[0.05]
                     "
+                    aria-hidden="true"
                   />
 
                   {/* Top Line */}
+
                   <div
                     className="
                       absolute
@@ -605,10 +646,13 @@ const About = () => {
                       transition-all
                       duration-700
                     "
+                    aria-hidden="true"
                   />
 
                   <div className="relative">
+
                     {/* Icon + Arrow */}
+
                     <div
                       className="
                         flex
@@ -640,6 +684,7 @@ const About = () => {
                           transition-all
                           duration-500
                         "
+                        aria-hidden="true"
                       >
                         {item.icon}
                       </div>
@@ -660,10 +705,12 @@ const About = () => {
                           transition-all
                           duration-300
                         "
+                        aria-hidden="true"
                       />
                     </div>
 
-                    {/* Title */}
+                    {/* Service Title */}
+
                     <h4
                       className="
                         text-lg
@@ -683,7 +730,8 @@ const About = () => {
                       {item.title}
                     </h4>
 
-                    {/* Description */}
+                    {/* Service Description */}
+
                     <p
                       className="
                         text-sm
@@ -702,11 +750,12 @@ const About = () => {
                       {item.description}
                     </p>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
 
             {/* ================= STATS ================= */}
+
             <div
               className="
                 grid
@@ -714,6 +763,7 @@ const About = () => {
                 gap-3
                 mt-6
               "
+              aria-label="Professional statistics"
             >
               {stats.map((stat) => (
                 <div
@@ -778,7 +828,8 @@ const About = () => {
             </div>
 
             {/* ================= CTA CARD ================= */}
-            <div
+
+            <aside
               className="
                 relative
                 mt-6
@@ -796,8 +847,10 @@ const About = () => {
 
                 overflow-hidden
               "
+              aria-label="Wix project call to action"
             >
               {/* Glow */}
+
               <div
                 className="
                   absolute
@@ -812,6 +865,7 @@ const About = () => {
                   rounded-full
                   blur-2xl
                 "
+                aria-hidden="true"
               />
 
               <div
@@ -826,6 +880,7 @@ const About = () => {
                 "
               >
                 {/* CTA Content */}
+
                 <div
                   className="
                     flex
@@ -839,6 +894,7 @@ const About = () => {
                       rounded-xl
                       bg-blue-500/10
                     "
+                    aria-hidden="true"
                   >
                     <Zap
                       className="
@@ -868,14 +924,17 @@ const About = () => {
                         text-gray-500
                       "
                     >
-                      Let’s turn your idea into a powerful website.
+                      Let’s turn your idea into a fast, responsive, and
+                      business-focused website.
                     </p>
                   </div>
                 </div>
 
                 {/* CTA Button */}
+
                 <a
                   href="#contact"
+                  aria-label="Contact Taosif Bin Sadhin about your Wix project"
                   className="
                     inline-flex
                     items-center
@@ -906,15 +965,19 @@ const About = () => {
                   "
                 >
                   Let's Talk
-                  <ArrowUpRight className="w-4 h-4" />
+                  <ArrowUpRight
+                    className="w-4 h-4"
+                    aria-hidden="true"
+                  />
                 </a>
               </div>
-            </div>
+            </aside>
           </div>
         </div>
       </div>
 
       {/* ================= ANIMATION CSS ================= */}
+
       <style>{`
         .reveal {
           opacity: 0;

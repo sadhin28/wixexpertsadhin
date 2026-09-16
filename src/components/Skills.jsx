@@ -41,45 +41,45 @@ const Skills = () => {
   const services = [
     {
       icon: <CgWebsite className="h-8 w-8" />,
-      title: "Wix Studio Development",
+      title: "Wix Studio & Wix Harmony Development",
       description:
-        "Modern, responsive Wix Studio websites with clean layouts, custom sections, animations, CMS, and business-focused functionality.",
-      tags: ["Wix Studio", "Responsive", "CMS"],
+        "Modern, responsive Wix Studio and Wix Harmony websites with custom sections, animations, CMS integration, clean layouts, and business-focused functionality.",
+      tags: ["Wix Studio", "Wix Harmony", "Responsive"],
     },
     {
       icon: <FaWix className="h-8 w-8" />,
-      title: "Wix Velo & Automation",
+      title: "Wix Velo & Custom Automation",
       description:
-        "Custom Velo functionality, dynamic pages, API integrations, webhooks, custom functions, and automated business workflows.",
-      tags: ["Velo", "API", "Automation"],
+        "Custom Wix Velo development including dynamic pages, custom functions, API integrations, webhooks, and automated workflows for complex business requirements.",
+      tags: ["Wix Velo", "API", "Automation"],
     },
     {
       icon: <Globe className="h-8 w-8" />,
-      title: "Business Website",
+      title: "Business Website Development",
       description:
-        "Professional websites designed around your brand, audience, and business goals to create trust and generate more opportunities.",
-      tags: ["Business", "UI", "SEO"],
+        "Professional Wix websites built around your brand, target audience, and business goals to improve credibility, user experience, and online opportunities.",
+      tags: ["Business", "UI/UX", "SEO"],
     },
     {
       icon: <FaPersonDotsFromLine className="h-8 w-8" />,
-      title: "Portfolio Website",
+      title: "Portfolio Website Design",
       description:
-        "High-quality portfolio websites that present your work, experience, and services in a professional way that attracts potential clients.",
+        "Professional portfolio websites that showcase your work, experience, skills, and services with a responsive design focused on attracting potential clients.",
       tags: ["Portfolio", "Personal Brand", "Responsive"],
     },
     {
       icon: <StoreIcon className="h-8 w-8" />,
-      title: "E-commerce & Membership",
+      title: "Wix E-commerce & Membership",
       description:
-        "Wix e-commerce, memberships, gated content, booking systems, pricing plans, and custom customer experiences.",
+        "Wix e-commerce stores, memberships, gated content, booking systems, pricing plans, and custom customer experiences tailored to your business needs.",
       tags: ["E-commerce", "Membership", "Booking"],
     },
     {
       icon: <FaSearchengin className="h-8 w-8" />,
-      title: "SEO & Performance",
+      title: "SEO & Website Performance",
       description:
-        "Technical SEO, mobile optimization, metadata, performance improvements, and user-friendly structures built for long-term growth.",
-      tags: ["SEO", "Speed", "Mobile"],
+        "SEO-focused website optimization including metadata, mobile responsiveness, technical improvements, page structure, usability, and performance optimization.",
+      tags: ["SEO", "Performance", "Mobile"],
     },
   ];
 
@@ -89,7 +89,7 @@ const Skills = () => {
     "Wix Studio",
     "Wix Harmony",
     "Wix Velo",
-    "CMS",
+    "Wix CMS",
     "Automation",
     "API Integration",
     "SEO",
@@ -106,10 +106,18 @@ const Skills = () => {
     "Figma",
   ];
 
+  const approachPoints = [
+    "Clean & Modern UI",
+    "Responsive Development",
+    "Custom Wix Functionality",
+    "SEO Ready Structure",
+  ];
+
   return (
     <section
       ref={sectionRef}
       id="services"
+      aria-labelledby="services-heading"
       className="
         relative
         py-12 sm:py-20 lg:py-24
@@ -121,8 +129,13 @@ const Skills = () => {
       "
     >
       {/* ================= BACKGROUND ================= */}
-      <div className="absolute inset-0 pointer-events-none">
+
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+      >
         {/* Blue Glow */}
+
         <div
           className="
             absolute top-20 left-[-180px]
@@ -136,6 +149,7 @@ const Skills = () => {
         />
 
         {/* Cyan Glow */}
+
         <div
           className="
             absolute bottom-10 right-[-180px]
@@ -150,6 +164,7 @@ const Skills = () => {
         />
 
         {/* Grid */}
+
         <div
           className="absolute inset-0 opacity-[0.018] dark:opacity-[0.025]"
           style={{
@@ -163,9 +178,11 @@ const Skills = () => {
       <div className="relative max-w-7xl mx-auto">
 
         {/* ================= SECTION HEADER ================= */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20 reveal">
+
+        <header className="text-center mb-12 sm:mb-16 lg:mb-20 reveal">
 
           {/* Badge */}
+
           <div
             className="
               inline-flex items-center gap-2
@@ -176,14 +193,33 @@ const Skills = () => {
               backdrop-blur-md
             "
           >
-            <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400 animate-pulse" />
+            <Sparkles
+              className="
+                w-4 h-4
+                text-blue-600
+                dark:text-blue-400
+                animate-pulse
+              "
+              aria-hidden="true"
+            />
 
-            <span className="text-sm text-blue-600 dark:text-blue-400 font-medium tracking-wide">
-              What I Do
+            <span
+              className="
+                text-sm
+                text-blue-600
+                dark:text-blue-400
+                font-medium
+                tracking-wide
+              "
+            >
+              Wix Development Services
             </span>
           </div>
 
+          {/* Main Heading */}
+
           <h2
+            id="services-heading"
             className="
               text-3xl sm:text-4xl lg:text-5xl xl:text-6xl
               font-bold
@@ -192,7 +228,7 @@ const Skills = () => {
               text-gray-950 dark:text-white
             "
           >
-            My{" "}
+            Wix Website Design &{" "}
             <span
               className="
                 text-transparent
@@ -202,22 +238,42 @@ const Skills = () => {
                 dark:from-blue-400 dark:via-cyan-400 dark:to-blue-500
               "
             >
-              Services
+              Development Services
             </span>
           </h2>
 
-          <p className="text-gray-600 dark:text-gray-400 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-            From modern Wix websites to advanced Velo functionality,
-            automation, CMS, and SEO — I build complete digital solutions
-            focused on real business results.
+          {/* SEO Intro */}
+
+          <p
+            className="
+              text-gray-600
+              dark:text-gray-400
+              text-base sm:text-lg
+              max-w-3xl
+              mx-auto
+              leading-relaxed
+            "
+          >
+            I provide professional Wix website design and development services
+            including Wix Studio, Wix Harmony, Wix Velo, Wix CMS, custom
+            automation, e-commerce, memberships, and SEO-focused website
+            optimization — all designed around real business goals.
           </p>
-        </div>
+        </header>
 
         {/* ================= SERVICE CARDS ================= */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
 
+        <div
+          className="
+            grid
+            sm:grid-cols-2
+            lg:grid-cols-3
+            gap-5 sm:gap-6 lg:gap-7
+          "
+          aria-label="Wix website development services"
+        >
           {services.map((item, index) => (
-            <div
+            <article
               key={item.title}
               style={{
                 transitionDelay: `${index * 80}ms`,
@@ -225,6 +281,7 @@ const Skills = () => {
               className="reveal group relative"
             >
               {/* Animated Border Glow */}
+
               <div
                 className="
                   absolute -inset-[1px]
@@ -236,6 +293,7 @@ const Skills = () => {
                   blur-sm
                   transition-all duration-500
                 "
+                aria-hidden="true"
               />
 
               <div
@@ -255,17 +313,21 @@ const Skills = () => {
                 "
               >
                 {/* Top Animated Line */}
+
                 <div
                   className="
                     absolute top-0 left-0
                     h-[2px] w-0
-                    bg-gradient-to-r from-blue-500 to-cyan-400
+                    bg-gradient-to-r
+                    from-blue-500 to-cyan-400
                     group-hover:w-full
                     transition-all duration-700
                   "
+                  aria-hidden="true"
                 />
 
                 {/* Background Glow */}
+
                 <div
                   className="
                     absolute -right-16 -top-16
@@ -278,13 +340,21 @@ const Skills = () => {
                     dark:group-hover:bg-blue-500/15
                     transition-all duration-500
                   "
+                  aria-hidden="true"
                 />
 
                 <div className="relative">
 
                   {/* Icon + Arrow */}
-                  <div className="flex items-start justify-between mb-5 sm:mb-6">
 
+                  <div
+                    className="
+                      flex
+                      items-start
+                      justify-between
+                      mb-5 sm:mb-6
+                    "
+                  >
                     <div
                       className="
                         w-12 h-12 sm:w-14 sm:h-14
@@ -299,6 +369,7 @@ const Skills = () => {
                         group-hover:rotate-3
                         transition-all duration-500
                       "
+                      aria-hidden="true"
                     >
                       {item.icon}
                     </div>
@@ -313,10 +384,12 @@ const Skills = () => {
                         group-hover:-translate-y-1
                         transition-all duration-300
                       "
+                      aria-hidden="true"
                     />
                   </div>
 
-                  {/* Title */}
+                  {/* Service Title */}
+
                   <h3
                     className="
                       text-xl font-semibold
@@ -330,7 +403,8 @@ const Skills = () => {
                     {item.title}
                   </h3>
 
-                  {/* Description */}
+                  {/* Service Description */}
+
                   <p
                     className="
                       text-gray-500
@@ -346,10 +420,14 @@ const Skills = () => {
                     {item.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
+                  {/* Service Tags */}
+
+                  <ul
+                    className="flex flex-wrap gap-2 list-none p-0 m-0"
+                    aria-label={`${item.title} skills`}
+                  >
                     {item.tags.map((tag) => (
-                      <span
+                      <li
                         key={tag}
                         className="
                           px-2.5 py-1
@@ -364,20 +442,22 @@ const Skills = () => {
                         "
                       >
                         {tag}
-                      </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
 
                 </div>
               </div>
-            </div>
+            </article>
           ))}
-
         </div>
 
         {/* ================= DEVELOPMENT APPROACH ================= */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 reveal">
 
+        <section
+          className="mt-12 sm:mt-16 lg:mt-20 reveal"
+          aria-labelledby="approach-heading"
+        >
           <div
             className="
               relative
@@ -392,6 +472,7 @@ const Skills = () => {
             "
           >
             {/* Background Glow */}
+
             <div
               className="
                 absolute left-1/2 top-[-100px]
@@ -403,9 +484,20 @@ const Skills = () => {
                 dark:bg-blue-500/10
                 blur-[100px]
               "
+              aria-hidden="true"
             />
 
-            <div className="relative grid lg:grid-cols-[1fr_auto] gap-7 sm:gap-10 items-center">
+            <div
+              className="
+                relative
+                grid
+                lg:grid-cols-[1fr_auto]
+                gap-7 sm:gap-10
+                items-center
+              "
+            >
+
+              {/* Approach Content */}
 
               <div>
                 <div className="flex items-center gap-3 mb-4">
@@ -417,79 +509,165 @@ const Skills = () => {
                       bg-blue-500/10
                       border border-blue-500/20
                     "
+                    aria-hidden="true"
                   >
-                    <Code2 className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                    <Code2
+                      className="
+                        w-6 h-6
+                        text-blue-600
+                        dark:text-blue-400
+                      "
+                    />
                   </div>
 
                   <div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
+                    <p
+                      className="
+                        text-xs
+                        uppercase
+                        tracking-[0.2em]
+                        text-blue-600
+                        dark:text-blue-400
+                      "
+                    >
                       My Approach
                     </p>
 
-                    <h3 className="text-2xl sm:text-3xl font-bold mt-1 text-gray-950 dark:text-white">
+                    <h3
+                      id="approach-heading"
+                      className="
+                        text-2xl sm:text-3xl
+                        font-bold
+                        mt-1
+                        text-gray-950
+                        dark:text-white
+                      "
+                    >
                       Design + Development + Growth
                     </h3>
                   </div>
 
                 </div>
 
-                <p className="text-gray-600 dark:text-gray-500 leading-7 max-w-3xl">
-                  I don't just build websites that look good. I focus on
-                  creating scalable websites that provide a smooth user
-                  experience, are easy to manage, and support your business
-                  goals.
+                <p
+                  className="
+                    text-gray-600
+                    dark:text-gray-500
+                    leading-7
+                    max-w-3xl
+                  "
+                >
+                  I don’t just build websites that look good. I focus on
+                  creating scalable Wix websites with a smooth user experience,
+                  responsive design, custom functionality, SEO-friendly
+                  structure, and easy-to-manage content that supports long-term
+                  business goals.
                 </p>
               </div>
 
-              <div className="flex flex-wrap lg:flex-col gap-3">
+              {/* Approach Features */}
 
-                {[
-                  "Clean & Modern UI",
-                  "Responsive Development",
-                  "Custom Functionality",
-                  "SEO Ready",
-                ].map((item) => (
-                  <div
+              <ul
+                className="
+                  flex flex-wrap
+                  lg:flex-col
+                  gap-3
+                  list-none
+                  p-0
+                  m-0
+                "
+                aria-label="Development approach features"
+              >
+                {approachPoints.map((item) => (
+                  <li
                     key={item}
                     className="
-                      flex items-center gap-2
+                      flex
+                      items-center
+                      gap-2
                       text-sm
-                      text-gray-600 dark:text-gray-300
+                      text-gray-600
+                      dark:text-gray-300
                     "
                   >
-                    <CheckCircle2 className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                    <CheckCircle2
+                      className="
+                        w-4 h-4
+                        text-blue-600
+                        dark:text-blue-400
+                      "
+                      aria-hidden="true"
+                    />
                     {item}
-                  </div>
+                  </li>
                 ))}
-
-              </div>
+              </ul>
 
             </div>
           </div>
-        </div>
+        </section>
 
         {/* ================= TECHNOLOGIES ================= */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 text-center reveal">
 
+        <section
+          className="mt-12 sm:mt-16 lg:mt-20 text-center reveal"
+          aria-labelledby="technologies-heading"
+        >
           <div className="inline-flex items-center gap-2 mb-4 sm:mb-5">
 
-            <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <Zap
+              className="
+                w-5 h-5
+                text-blue-600
+                dark:text-blue-400
+              "
+              aria-hidden="true"
+            />
 
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white">
-              Technologies I Work With
+            <h3
+              id="technologies-heading"
+              className="
+                text-2xl sm:text-3xl
+                font-bold
+                text-gray-950
+                dark:text-white
+              "
+            >
+              Technologies & Tools I Work With
             </h3>
 
           </div>
 
-          <p className="text-gray-500 max-w-2xl mx-auto mb-7 sm:mb-9 text-sm sm:text-base">
-            A modern toolkit for building flexible, scalable, and
-            high-performance web experiences.
+          <p
+            className="
+              text-gray-500
+              max-w-2xl
+              mx-auto
+              mb-7 sm:mb-9
+              text-sm sm:text-base
+            "
+          >
+            I use Wix development tools and modern web technologies to build
+            flexible, scalable, responsive, and high-performance digital
+            experiences.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 max-w-5xl mx-auto">
-
+          <ul
+            className="
+              flex
+              flex-wrap
+              justify-center
+              gap-2.5 sm:gap-3
+              max-w-5xl
+              mx-auto
+              list-none
+              p-0
+              m-0
+            "
+            aria-label="Technologies and development tools"
+          >
             {technologies.map((tech, index) => (
-              <span
+              <li
                 key={tech}
                 style={{
                   animationDelay: `${index * 70}ms`,
@@ -518,16 +696,16 @@ const Skills = () => {
                 "
               >
                 {tech}
-              </span>
+              </li>
             ))}
-
-          </div>
-        </div>
+          </ul>
+        </section>
 
         {/* ================= BOTTOM CTA ================= */}
+
         <div className="mt-10 sm:mt-12 lg:mt-16 text-center reveal">
 
-          <div
+          <aside
             className="
               inline-flex
               flex-col sm:flex-row
@@ -539,18 +717,39 @@ const Skills = () => {
               border border-blue-500/20
               bg-blue-500/[0.04]
             "
+            aria-label="Start a Wix project"
           >
 
-            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 text-sm">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+            <div
+              className="
+                flex
+                items-center
+                gap-2
+                text-gray-600
+                dark:text-gray-300
+                text-sm
+              "
+            >
+              <span
+                className="
+                  w-2 h-2
+                  rounded-full
+                  bg-green-400
+                  animate-pulse
+                "
+                aria-hidden="true"
+              />
 
-              Ready to build your next project?
+              Ready to build your next Wix project?
             </div>
 
             <a
               href="#contact"
+              aria-label="Contact Taosif Bin Sadhin about a Wix project"
               className="
-                inline-flex items-center gap-2
+                inline-flex
+                items-center
+                gap-2
                 px-5 py-2.5
                 rounded-xl
                 bg-blue-600
@@ -565,15 +764,19 @@ const Skills = () => {
               "
             >
               Let's Work Together
-              <ArrowUpRight className="w-4 h-4" />
+
+              <ArrowUpRight
+                className="w-4 h-4"
+                aria-hidden="true"
+              />
             </a>
 
-          </div>
-
+          </aside>
         </div>
       </div>
 
       {/* ================= ANIMATIONS ================= */}
+
       <style>{`
         .reveal {
           opacity: 0;

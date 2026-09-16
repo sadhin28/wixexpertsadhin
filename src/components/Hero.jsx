@@ -1,4 +1,3 @@
-
 import {
   ArrowDown,
   ArrowRight,
@@ -18,6 +17,7 @@ const Hero = () => {
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -25,7 +25,8 @@ const Hero = () => {
   const handleResume = () => {
     window.open(
       "https://drive.google.com/file/d/12gSCvxHNlnV9TtDrJ3bmap7_QOcsWVbn/view",
-      "_blank"
+      "_blank",
+      "noopener,noreferrer"
     );
   };
 
@@ -33,7 +34,7 @@ const Hero = () => {
     "Wix Studio",
     "Wix Harmony",
     "Wix Velo",
-    "CMS",
+    "Wix CMS",
     "Automation",
     "SEO",
   ];
@@ -41,6 +42,7 @@ const Hero = () => {
   return (
     <section
       id="home"
+      aria-labelledby="hero-heading"
       className="
         relative min-h-screen flex items-center overflow-hidden
         bg-white text-gray-900
@@ -49,8 +51,10 @@ const Hero = () => {
       "
     >
       {/* ================= BACKGROUND ================= */}
-      <div className="absolute inset-0 pointer-events-none">
-
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+      >
         {/* Light Mode Blue Glow */}
         <div
           className="
@@ -106,7 +110,6 @@ const Hero = () => {
             items-center
           "
         >
-
           {/* ================= LEFT CONTENT ================= */}
           <div className="text-center lg:text-left">
 
@@ -126,7 +129,10 @@ const Hero = () => {
                   dark:bg-white/[0.025]
                 "
               >
-                <span className="relative flex h-2 w-2">
+                <span
+                  className="relative flex h-2 w-2"
+                  aria-hidden="true"
+                >
                   <span
                     className="
                       absolute inline-flex h-full w-full
@@ -175,6 +181,7 @@ const Hero = () => {
                   bg-blue-500/60
                   hidden sm:block
                 "
+                aria-hidden="true"
               />
 
               <p
@@ -190,8 +197,9 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Main Heading */}
+            {/* ================= MAIN SEO HEADING ================= */}
             <h1
+              id="hero-heading"
               className="
                 hero-item hero-delay-3
                 text-4xl
@@ -206,8 +214,7 @@ const Hero = () => {
                 dark:text-white
               "
             >
-              I Build Websites
-
+              Wix Expert, Wix Studio
               <br />
 
               <span
@@ -221,15 +228,29 @@ const Hero = () => {
                   dark:to-cyan-400
                 "
               >
-                That Grow Businesses.
+                & Velo Developer
               </span>
             </h1>
+
+            {/* Supporting Marketing Statement */}
+            <p
+              className="
+                hero-item hero-delay-4
+                mt-4
+                text-xl sm:text-2xl
+                font-semibold
+                text-gray-800
+                dark:text-gray-200
+              "
+            >
+              I Build Websites That Grow Businesses.
+            </p>
 
             {/* Professional Role */}
             <div
               className="
                 hero-item hero-delay-4
-                mt-6
+                mt-5
                 flex items-center justify-center
                 lg:justify-start
                 gap-2
@@ -238,12 +259,15 @@ const Hero = () => {
                 text-gray-700
                 dark:text-gray-300
               "
+              aria-label="Professional specialties"
             >
               <FaWix
                 className="
                   text-blue-600
                   dark:text-blue-400
+                  flex-shrink-0
                 "
+                aria-hidden="true"
               />
 
               <TypeAnimation
@@ -278,22 +302,28 @@ const Hero = () => {
                 dark:text-gray-400
               "
             >
-              I build modern, responsive and SEO-friendly Wix websites with
-              custom CMS, Velo functionality, automation and scalable
-              solutions that help businesses grow online.
+              I’m Taosif Bin Sadhin, a Wix Expert specializing in Wix Studio,
+              Wix Harmony, Velo, CMS development, custom automation and
+              responsive website design. I build SEO-friendly Wix websites
+              designed to create a strong online presence and help businesses
+              grow.
             </p>
 
             {/* Skills */}
-            <div
+            <ul
+              aria-label="Wix development skills"
               className="
                 hero-item hero-delay-6
                 flex flex-wrap
                 justify-center lg:justify-start
                 gap-2 mt-6
+                list-none
+                p-0
+                m-0
               "
             >
               {skills.map((skill, index) => (
-                <span
+                <li
                   key={skill}
                   className="
                     skill-item
@@ -324,11 +354,11 @@ const Hero = () => {
                   }}
                 >
                   {skill}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
 
-            {/* CTA Buttons */}
+            {/* ================= CTA BUTTONS ================= */}
             <div
               className="
                 hero-item hero-delay-7
@@ -339,7 +369,9 @@ const Hero = () => {
             >
               {/* Projects */}
               <button
+                type="button"
                 onClick={() => scrollToSection("projects")}
+                aria-label="View Wix and web development projects"
                 className="
                   group
                   inline-flex items-center justify-center gap-2
@@ -370,12 +402,15 @@ const Hero = () => {
                     group-hover:translate-x-1
                     transition-transform duration-300
                   "
+                  aria-hidden="true"
                 />
               </button>
 
               {/* Resume */}
               <button
+                type="button"
                 onClick={handleResume}
+                aria-label="Open Taosif Bin Sadhin resume"
                 className="
                   inline-flex items-center justify-center gap-2
                   px-7 py-3.5
@@ -403,8 +438,9 @@ const Hero = () => {
               </button>
             </div>
 
-            {/* Social Links */}
-            <div
+            {/* ================= SOCIAL LINKS ================= */}
+            <nav
+              aria-label="Social media profiles"
               className="
                 hero-item hero-delay-8
                 flex justify-center lg:justify-start
@@ -416,10 +452,14 @@ const Hero = () => {
                 href="https://github.com/sadhin28"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
+                aria-label="Visit Taosif Bin Sadhin on GitHub"
+                title="GitHub - Taosif Bin Sadhin"
                 className="social-icon"
               >
-                <GrGithub className="w-5 h-5" />
+                <GrGithub
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                />
               </a>
 
               {/* LinkedIn */}
@@ -427,21 +467,30 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/taosif-bin-sadhin-527899368"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                aria-label="Visit Taosif Bin Sadhin on LinkedIn"
+                title="LinkedIn - Taosif Bin Sadhin"
                 className="social-icon"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                />
               </a>
 
               {/* Contact */}
               <button
+                type="button"
                 onClick={() => scrollToSection("contact")}
-                aria-label="Contact"
+                aria-label="Go to contact section"
+                title="Contact Taosif Bin Sadhin"
                 className="social-icon"
               >
-                <Mail className="w-5 h-5" />
+                <Mail
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                />
               </button>
-            </div>
+            </nav>
           </div>
 
           {/* ================= RIGHT SIDE ================= */}
@@ -455,7 +504,6 @@ const Hero = () => {
                 md:w-[390px] md:h-[390px]
               "
             >
-
               {/* Soft Glow */}
               <div
                 className="
@@ -466,6 +514,7 @@ const Hero = () => {
                   blur-[70px]
                   animate-pulse
                 "
+                aria-hidden="true"
               />
 
               {/* Outer Ring */}
@@ -477,6 +526,7 @@ const Hero = () => {
                   border-blue-500/15
                   dark:border-blue-500/15
                 "
+                aria-hidden="true"
               />
 
               {/* Small Decorative Ring */}
@@ -489,6 +539,7 @@ const Hero = () => {
                   dark:border-cyan-400/15
                   animate-[spin_30s_linear_infinite]
                 "
+                aria-hidden="true"
               />
 
               {/* Image Container */}
@@ -510,7 +561,12 @@ const Hero = () => {
               >
                 <img
                   src="/profile.png"
-                  alt="Taosif Bin Sadhin - Wix Expert and Wix Studio Developer"
+                  alt="Taosif Bin Sadhin, Wix Expert and Wix Studio Developer"
+                  width="390"
+                  height="390"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="
                     w-full h-full
                     object-cover
@@ -555,6 +611,7 @@ const Hero = () => {
                       flex items-center justify-center
                       bg-blue-500/10
                     "
+                    aria-hidden="true"
                   >
                     <FaWix
                       className="
@@ -625,6 +682,7 @@ const Hero = () => {
                       flex items-center justify-center
                       bg-blue-500/10
                     "
+                    aria-hidden="true"
                   >
                     <Sparkles
                       className="
@@ -669,6 +727,7 @@ const Hero = () => {
                   right-[-12px]
                   sm:right-[-20px]
                 "
+                aria-hidden="true"
               >
                 <div
                   className="
@@ -701,7 +760,9 @@ const Hero = () => {
         {/* ================= SCROLL INDICATOR ================= */}
         <div className="flex justify-center mt-12 lg:mt-8">
           <button
+            type="button"
             onClick={() => scrollToSection("about")}
+            aria-label="Scroll to About section"
             className="
               group
               flex flex-col
@@ -733,6 +794,7 @@ const Hero = () => {
                 group-hover:translate-y-1
                 transition-transform duration-300
               "
+              aria-hidden="true"
             />
           </button>
         </div>

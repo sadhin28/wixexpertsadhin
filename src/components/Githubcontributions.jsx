@@ -77,10 +77,15 @@ const GitHubContributions = () => {
     return (
         <section
             ref={sectionRef}
+            id="github"
+            aria-labelledby="github-heading"
             className="relative overflow-hidden bg-white py-12 transition-colors duration-300 dark:bg-slate-950 sm:py-16 lg:py-20"
         >
             {/* Background Decoration */}
-            <div className="pointer-events-none absolute inset-0">
+            <div
+                className="pointer-events-none absolute inset-0"
+                aria-hidden="true"
+            >
                 <div className="absolute left-1/2 top-20 h-48 w-48 -translate-x-1/2 rounded-full bg-blue-500/5 blur-3xl dark:bg-blue-500/10" />
 
                 <div
@@ -96,7 +101,7 @@ const GitHubContributions = () => {
             <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
-                <div
+                <header
                     className={`mx-auto max-w-2xl text-center transition-all duration-1000 ${
                         isVisible
                             ? "translate-y-0 opacity-100"
@@ -104,12 +109,18 @@ const GitHubContributions = () => {
                     }`}
                 >
                     {/* Small Badge */}
-                    <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-600 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-400">
+                    <div
+                        className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-600 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-400"
+                        aria-hidden="true"
+                    >
                         <Github className="h-3.5 w-3.5" />
                         GitHub Activity
                     </div>
 
-                    <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl dark:text-white">
+                    <h2
+                        id="github-heading"
+                        className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl lg:text-4xl dark:text-white"
+                    >
                         My GitHub{" "}
                         <span className="text-blue-500">
                             Contributions
@@ -117,10 +128,10 @@ const GitHubContributions = () => {
                     </h2>
 
                     <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-gray-500 sm:text-base dark:text-gray-400">
-                        A look at my coding activity, consistency, and
-                        contributions on GitHub.
+                        Explore my GitHub coding activity, development
+                        consistency, and open-source contributions.
                     </p>
-                </div>
+                </header>
 
                 {/* Main Content */}
                 <div
@@ -133,25 +144,38 @@ const GitHubContributions = () => {
                     <div className="grid gap-5 lg:grid-cols-[180px_1fr] lg:items-stretch">
 
                         {/* Year Selector */}
-                        <div className="flex flex-col justify-center rounded-2xl border border-gray-200 bg-gray-50 p-5 text-left shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-blue-500/40">
-
-                            <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
+                        <aside
+                            aria-labelledby="github-year-heading"
+                            className="flex flex-col justify-center rounded-2xl border border-gray-200 bg-gray-50 p-5 text-left shadow-sm transition-all duration-300 hover:border-blue-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-blue-500/40"
+                        >
+                            <div
+                                className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500"
+                                aria-hidden="true"
+                            >
                                 <CalendarDays className="h-5 w-5" />
                             </div>
 
-                            <label
-                                htmlFor="year-select"
+                            <h3
+                                id="github-year-heading"
                                 className="mb-2 text-sm font-semibold text-gray-800 dark:text-gray-200"
                             >
                                 Select Year
+                            </h3>
+
+                            <label
+                                htmlFor="year-select"
+                                className="sr-only"
+                            >
+                                Select GitHub contribution year
                             </label>
 
                             <select
                                 id="year-select"
                                 value={year}
                                 onChange={(e) =>
-                                    setYear(parseInt(e.target.value))
+                                    setYear(Number(e.target.value))
                                 }
+                                aria-label="Select GitHub contribution year"
                                 className="w-full cursor-pointer rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-sm font-medium text-gray-700 outline-none transition-all duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 dark:border-slate-700 dark:bg-slate-950 dark:text-gray-200"
                             >
                                 {years.map((y) => (
@@ -162,27 +186,36 @@ const GitHubContributions = () => {
                             </select>
 
                             <p className="mt-3 text-xs leading-5 text-gray-500 dark:text-gray-500">
-                                View your GitHub contribution activity by
-                                year.
+                                View GitHub contribution activity by year.
                             </p>
-                        </div>
+                        </aside>
 
                         {/* GitHub Calendar */}
-                        <div className="group relative min-w-0 overflow-hidden rounded-2xl border border-gray-200 bg-white p-3 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-blue-500/40 sm:p-5">
-
+                        <article
+                            aria-labelledby="github-calendar-heading"
+                            className="group relative min-w-0 overflow-hidden rounded-2xl border border-gray-200 bg-white p-3 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900/70 dark:hover:border-blue-500/40"
+                        >
                             {/* Top Animated Line */}
-                            <div className="absolute left-0 right-0 top-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 transition-transform duration-700 group-hover:scale-x-100" />
+                            <div
+                                className="absolute left-0 right-0 top-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 transition-transform duration-700 group-hover:scale-x-100"
+                                aria-hidden="true"
+                            />
 
                             {/* Calendar Header */}
-                            <div className="mb-4 flex items-center justify-between px-1">
-
+                            <header className="mb-4 flex items-center justify-between px-1">
                                 <div>
-                                    <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200">
-                                        Contribution Activity
+                                    <h3
+                                        id="github-calendar-heading"
+                                        className="text-sm font-semibold text-gray-800 dark:text-gray-200"
+                                    >
+                                        GitHub Contribution Activity
                                     </h3>
 
-                                    <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-500">
-                                        {year}
+                                    <p
+                                        className="mt-0.5 text-xs text-gray-500 dark:text-gray-500"
+                                        aria-live="polite"
+                                    >
+                                        Contribution activity for {year}
                                     </p>
                                 </div>
 
@@ -190,12 +223,23 @@ const GitHubContributions = () => {
                                     href="https://github.com/sadhin28"
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    title="Visit Taosif Bin Sadhin's GitHub profile"
+                                    aria-label="Visit Taosif Bin Sadhin's GitHub profile"
                                     className="group/link inline-flex items-center gap-1 text-xs font-medium text-blue-500 transition-all duration-300 hover:text-blue-600"
                                 >
                                     GitHub
-                                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
+                                    <ArrowRight
+                                        className="h-3.5 w-3.5 transition-transform duration-300 group-hover/link:translate-x-1"
+                                        aria-hidden="true"
+                                    />
                                 </a>
-                            </div>
+                            </header>
+
+                            {/* Calendar Description */}
+                            <p className="sr-only">
+                                GitHub contribution calendar showing Taosif
+                                Bin Sadhin's coding activity for {year}.
+                            </p>
 
                             {/* Scrollable Calendar */}
                             <div
@@ -204,6 +248,7 @@ const GitHubContributions = () => {
                                     WebkitOverflowScrolling: "touch",
                                     scrollbarWidth: "thin",
                                 }}
+                                aria-label={`GitHub contribution calendar for ${year}`}
                             >
                                 <div className="flex min-w-max justify-center">
                                     <GitHubCalendar
@@ -217,10 +262,11 @@ const GitHubContributions = () => {
                             </div>
 
                             {/* Mobile Hint */}
-                            <div className="mt-2 text-center text-[10px] text-gray-400 sm:hidden">
-                                ← Swipe to view full calendar →
-                            </div>
-                        </div>
+                            <p className="mt-2 text-center text-[10px] text-gray-400 sm:hidden">
+                                ← Swipe to view the full GitHub contribution
+                                calendar →
+                            </p>
+                        </article>
                     </div>
                 </div>
 
@@ -236,11 +282,21 @@ const GitHubContributions = () => {
                         href="https://github.com/sadhin28"
                         target="_blank"
                         rel="noopener noreferrer"
+                        title="View Taosif Bin Sadhin's GitHub profile"
+                        aria-label="View Taosif Bin Sadhin's GitHub profile"
                         className="group inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-500 hover:text-blue-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:text-gray-300"
                     >
-                        <Github className="h-4 w-4" />
+                        <Github
+                            className="h-4 w-4"
+                            aria-hidden="true"
+                        />
+
                         View My GitHub
-                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+
+                        <ArrowRight
+                            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                            aria-hidden="true"
+                        />
                     </a>
                 </div>
             </div>

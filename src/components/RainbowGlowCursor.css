@@ -1,42 +1,54 @@
-.glow-bg {
-  background: radial-gradient(120px at var(--x) var(--y), rgba(0,200,255,0.3), transparent 40%);
-  animation: rainbowGlow 8s ease-in-out infinite;
-  transition: background 0.05s linear;
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 420px;
+    height: 420px;
+
+    transform: translate3d(
+        calc(var(--cursor-x, -500px) - 50%),
+        calc(var(--cursor-y, -500px) - 50%),
+        0
+    );
+
+    pointer-events: none;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(59, 130, 246, 0.16),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 70% 40%,
+            rgba(34, 211, 238, 0.12),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 50% 75%,
+            rgba(139, 92, 246, 0.10),
+            transparent 42%
+        );
+
+    filter: blur(35px);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    will-change: transform;
 }
 
-/* 10-color rainbow animation */
-@keyframes rainbowGlow {
-  0% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(0,200,255,0.3), transparent 40%);
-  }
-  10% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(255,0,200,0.3), transparent 40%);
-  }
-  20% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(255,100,0,0.3), transparent 40%);
-  }
-  30% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(255,255,0,0.3), transparent 40%);
-  }
-  40% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(0,255,0,0.3), transparent 40%);
-  }
-  50% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(0,255,255,0.3), transparent 40%);
-  }
-  60% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(0,0,255,0.3), transparent 40%);
-  }
-  70% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(150,0,255,0.3), transparent 40%);
-  }
-  80% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(255,0,100,0.3), transparent 40%);
-  }
-  90% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(255,150,50,0.3), transparent 40%);
-  }
-  100% {
-    background: radial-gradient(120px at var(--x) var(--y), rgba(0,200,255,0.3), transparent 40%);
-  }
+@media (hover: hover) and (pointer: fine) {
+    .cursor-glow {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cursor-glow {
+        display: none;
+    }
 }

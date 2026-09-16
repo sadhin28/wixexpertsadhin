@@ -1,29 +1,39 @@
-import React, { useEffect, useState } from "react";
-import "./RainbowGlowCursor.css"; // import CSS separately
+import { useEffect } from "react";
+import "./RainbowGlowCursor.css";
 
 export default function RainbowGlowCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+    useEffect(() => {
+        // Disable the effect for touch devices
+        const isTouchDevice =
+            window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
-  useEffect(() => {
-    const handleMove = (e) => {
-      // detect mouse or touch
-      const x = e.touches ? e.touches[0].clientX : e.clientX;
-      const y = e.touches ? e.touches[0].clientY : e.clientY;
+        if (isTouchDevice) return;
 
-      setPosition({ x, y });
-      // update CSS variables
-      document.documentElement.style.setProperty("--x", `${x}px`);
-      document.documentElement.style.setProperty("--y", `${y}px`);
-    };
+        const root = document.documentElement;
 
-    window.addEventListener("mousemove", handleMove);
-    window.addEventListener("touchmove", handleMove, { passive: true });
+        const handleMove = (event) => {
+            root.style.setProperty("--cursor-x", `${event.clientX}px`);
+            root.style.setProperty("--cursor-y", `${event.clientY}px`);
+        };
 
-    return () => {
-      window.removeEventListener("mousemove", handleMove);
-      window.removeEventListener("touchmove", handleMove);
-    };
-  }, []);
+        window.addEventListener("mousemove", handleMove, {
+            passive: true,
+        });
 
-  return <div className="pointer-events-none fixed top-0 left-0 w-screen h-screen z-[9999] glow-bg"></div>;
+        return () => {
+            window.removeEventListener("mousemove", handleMove);
+
+            root.style.removeProperty("--cursor-x");
+            root.style.removeProperty("--cursor-y");
+        };
+    }, []);
+
+    return (
+        <div
+            className="pointer-events-none fixed inset-0 z-[9999] overflow-hidden"
+            aria-hidden="true"
+        >
+            <div className="cursor-glow" />
+        </div>
+    );
 }

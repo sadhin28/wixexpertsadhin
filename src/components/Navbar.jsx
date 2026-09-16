@@ -182,7 +182,7 @@ const Navbar = () => {
                 "
               >
                 <span className="text-white font-bold text-sm">
-                  TBS
+                  WIX
                 </span>
               </div>
 
